@@ -1,0 +1,393 @@
+{
+  "custom_property_definition": {
+    "folder_properties": {
+      "owner": "STRING",
+      "hidden": "BOOLEAN"
+    }
+  },
+  "file_system_type": "Windows File Server",
+  "folders": [
+    {
+      "inherit_parent_permissions": false,
+      "name": "folder_1",
+      "parent_id": "test_mount_1",
+      "path": "/test_mount_1/folder_1",
+      "unique_id": "test_folder_1",
+      "created_at": "2021-01-01T00:00:00.000Z",
+      "description": "this is test folder 1",
+      "custom_properties": {
+        "owner": "admin@example.com",
+        "hidden": false
+      },
+      "updated_at": "2021-02-01T00:00:00.000Z",
+      "identity_to_permissions": {
+        "test_user_2@example.com": [
+          "custom_read"
+        ]
+      },
+      "tags": [
+        {
+          "Key": "folder_tag_1",
+          "Value": "folder_tag_1_value"
+        }
+      ]
+    },
+    {
+      "inherit_parent_permissions": false,
+      "name": "folder_1a",
+      "parent_id": "test_folder_1",
+      "path": "/test_mount_1/folder_1/folder_1a",
+      "unique_id": "test_folder_1a",
+      "created_at": "2021-01-02T00:00:00.000Z",
+      "description": "this is test folder 1a",
+      "custom_properties": {
+        "hidden": true
+      },
+      "updated_at": "2021-02-02T00:00:00.000Z",
+      "identity_to_permissions": {
+        "test_user_3@example.com": [
+          "custom_rw"
+        ]
+      },
+      "tags": [
+        {
+          "Key": "folder_tag_1a"
+        }
+      ]
+    },
+    {
+      "inherit_parent_permissions": false,
+      "name": "folder_2",
+      "parent_id": "test_mount_2",
+      "path": "/test_mount_2/folder_2",
+      "unique_id": "test_folder_2",
+      "created_at": "2022-01-01T00:00:00.000Z",
+      "description": "this is test folder 2",
+      "custom_properties": {
+        "owner": "storage_admin@example.com"
+      },
+      "updated_at": "2022-02-01T00:00:00.000Z",
+      "identity_to_permissions": {
+        "test_user_1@example.com": [
+          "custom_read"
+        ]
+      },
+      "tags": [
+        {
+          "Key": "folder_tag_2"
+        }
+      ]
+    },
+    {
+      "inherit_parent_permissions": true,
+      "name": "folder_2a",
+      "parent_id": "test_folder_2",
+      "path": "/test_mount_2/folder_2/folder_2a",
+      "unique_id": "test_folder_2a",
+      "created_at": "2022-01-02T00:00:00.000Z",
+      "description": "this is test folder 2a",
+      "updated_at": "2022-02-02T00:00:00.000Z"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "AccessSystemSecurity",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "AppendData",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "ChangePermissions",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "CreateDirectories",
+      "permission_type": [
+        "DataWrite",
+        "MetadataCreate"
+      ]
+    },
+    {
+      "name": "CreateFiles",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "Delete",
+      "permission_type": [
+        "DataDelete"
+      ]
+    },
+    {
+      "name": "DeleteSubdirectoriesAndFiles",
+      "permission_type": [
+        "DataDelete",
+        "MetadataDelete"
+      ]
+    },
+    {
+      "name": "ExecuteFile",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "FileAppendData",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "FileDeleteChild",
+      "permission_type": [
+        "DataDelete"
+      ]
+    },
+    {
+      "name": "FileExecute",
+      "permission_type": [
+        "NonData"
+      ]
+    },
+    {
+      "name": "FileReadAttributes",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "FileReadData",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "FileReadEA",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "FileWriteAttributes",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "FileWriteData",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "FileWriteEA",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "FullControl",
+      "permission_type": [
+        "DataCreate",
+        "DataDelete",
+        "DataRead",
+        "DataWrite",
+        "MetadataCreate",
+        "MetadataDelete",
+        "MetadataRead",
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "GenericAll",
+      "permission_type": [
+        "DataCreate",
+        "DataDelete",
+        "DataRead",
+        "DataWrite",
+        "MetadataCreate",
+        "MetadataDelete",
+        "MetadataRead",
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "GenericExecute",
+      "permission_type": [
+        "NonData"
+      ]
+    },
+    {
+      "name": "GenericRead",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "GenericWrite",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "ListDirectory",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "MaximumAllowed",
+      "permission_type": [
+        "DataCreate",
+        "DataDelete",
+        "DataRead",
+        "DataWrite",
+        "MetadataCreate",
+        "MetadataDelete",
+        "MetadataRead",
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "Modify",
+      "permission_type": [
+        "DataWrite",
+        "DataDelete"
+      ]
+    },
+    {
+      "name": "Read",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "ReadControl",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "ReadAndExecute",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "ReadAttributes",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "ReadData",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "ReadExtendedAttributes",
+      "permission_type": [
+        "DataRead"
+      ]
+    },
+    {
+      "name": "ReadPermissions",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "Synchronize",
+      "permission_type": [
+        "NonData"
+      ]
+    },
+    {
+      "name": "TakeOwnership",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "Traverse",
+      "permission_type": [
+        "MetadataRead"
+      ]
+    },
+    {
+      "name": "Write",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "WriteAttributes",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "WriteDac",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "WriteData",
+      "permission_type": [
+        "DataWrite"
+      ]
+    },
+    {
+      "name": "WriteExtendedAttributes",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "WriteOwner",
+      "permission_type": [
+        "MetadataWrite"
+      ]
+    },
+    {
+      "name": "custom_rw",
+      "permission_type": [
+        "DataRead",
+        "DataWrite"
+      ],
+      "description": "read-write"
+    },
+    {
+      "name": "custom_read",
+      "permission_type": [
+        "DataRead",
+        "MetadataRead"
+      ],
+      "description": "custom_read"
+    },
+    {
+      "name": "custom_full",
+      "permission_type": [
+        "DataRead",
+        "DataWrite",
+        "MetadataRead",
+        "MetadataWrite",
+        "DataCreate",
+        "DataDelete"
+      ],
+      "description": "full control"
+    }
+  ],
+  "server_unique_id": "test_server_1"
+}

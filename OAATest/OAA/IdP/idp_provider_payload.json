@@ -1,0 +1,204 @@
+{
+  "custom_property_definition": {
+    "user_properties": {
+      "contractor": "BOOLEAN",
+      "parking_space": "NUMBER",
+      "cube_number": "STRING",
+      "nicknames": "STRING_LIST",
+      "birthday": "TIMESTAMP"
+    },
+    "group_properties": {
+      "owner": "STRING"
+    },
+    "domain_properties": {
+      "region": "STRING"
+    }
+  },
+  "name": "MSTest IdP",
+  "idp_type": "LDAP",
+  "domains": [
+    {
+      "name": "example.com",
+      "custom_properties": {
+        "region": "US"
+      },
+      "tags": [
+        {
+          "Key": "domain_tag",
+          "Value": null
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "assumed_role_arns": [
+        {
+          "identity": "arn:aws:iam::123456789012:role/role1"
+        }
+      ],
+      "department": "Quality Assurance",
+      "email": "user1@example.com",
+      "full_name": "User 1",
+      "groups": [
+        {
+          "identity": "g1111"
+        }
+      ],
+      "is_active": true,
+      "is_guest": false,
+      "manager_id": "3333",
+      "name": "user1",
+      "source_identity": {
+        "identity": "user1@example.local",
+        "provider_type": "okta"
+      },
+      "identity": "1111",
+      "custom_properties": {
+        "contractor": false,
+        "parking_space": 1,
+        "cube_number": "A1",
+        "nicknames": [
+          "Nick",
+          "One Dude"
+        ],
+        "birthday": "2000-01-01T00:00:00.000Z"
+      },
+      "tags": [
+        {
+          "Key": "user1_tag",
+          "Value": null
+        }
+      ]
+    },
+    {
+      "department": "Sales",
+      "email": "user2@example.com",
+      "full_name": "User 2",
+      "groups": [
+        {
+          "identity": "g1111"
+        },
+        {
+          "identity": "g2222"
+        }
+      ],
+      "is_active": false,
+      "is_guest": true,
+      "name": "user2",
+      "source_identity": {
+        "identity": "user2@corp.example.com",
+        "provider_type": "azure_ad"
+      },
+      "identity": "2222",
+      "tags": [
+        {
+          "Key": "user2_tag",
+          "Value": "test"
+        }
+      ]
+    },
+    {
+      "email": "user3@example.com",
+      "full_name": "User 3",
+      "groups": [
+        {
+          "identity": "g2222"
+        },
+        {
+          "identity": "g333"
+        }
+      ],
+      "name": "user3",
+      "identity": "3333"
+    },
+    {
+      "email": "user4@example.com",
+      "full_name": "User 4",
+      "groups": [
+        {
+          "identity": "g2222"
+        }
+      ],
+      "name": "user4",
+      "identity": "4444"
+    },
+    {
+      "email": "user5@example.com",
+      "full_name": "User 5",
+      "groups": [
+        {
+          "identity": "g333"
+        }
+      ],
+      "name": "user5",
+      "identity": "5555"
+    }
+  ],
+  "groups": [
+    {
+      "assumed_role_arns": [
+        {
+          "identity": "arn:aws:iam::123456789012:role/role1"
+        }
+      ],
+      "full_name": "Group 1",
+      "groups": [],
+      "is_security_group": false,
+      "name": "group1",
+      "identity": "g1111",
+      "custom_properties": {
+        "owner": "user1"
+      },
+      "tags": [
+        {
+          "Key": "group1_tag",
+          "Value": "test"
+        }
+      ]
+    },
+    {
+      "assumed_role_arns": null,
+      "full_name": "Group 2",
+      "groups": [
+        {
+          "identity": "g333"
+        },
+        {
+          "identity": "g4444"
+        }
+      ],
+      "is_security_group": false,
+      "name": "group2",
+      "identity": "g2222"
+    },
+    {
+      "assumed_role_arns": null,
+      "full_name": "Group 3",
+      "groups": [],
+      "is_security_group": false,
+      "name": "group3",
+      "identity": "g333"
+    },
+    {
+      "assumed_role_arns": null,
+      "full_name": "Group 4",
+      "groups": [
+        {
+          "identity": "g333"
+        }
+      ],
+      "is_security_group": false,
+      "name": "group4",
+      "identity": "g4444"
+    },
+    {
+      "assumed_role_arns": null,
+      "full_name": "Group 5",
+      "groups": [],
+      "is_security_group": false,
+      "name": "group5",
+      "identity": "g5555"
+    }
+  ]
+}

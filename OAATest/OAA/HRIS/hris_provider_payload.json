@@ -1,0 +1,260 @@
+{
+  "name": "MSTest HRIS",
+  "hris_type": "MSTestHRIS",
+  "custom_property_definition": {
+    "employee_properties": {
+      "nickname": "STRING",
+      "has_keys": "BOOLEAN"
+    },
+    "group_properties": {
+      "is_social": "BOOLEAN"
+    },
+    "system_properties": {}
+  },
+  "system": {
+    "id": "MSTest HRIS",
+    "name": "MSTest HRIS",
+    "url": "https://example.com",
+    "idp_providers": [
+      "okta",
+      "azure_ad"
+    ]
+  },
+  "employees": [
+    {
+      "HRISEmployee_number": "emp_0",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 0",
+      "id": "employee_0",
+      "is_active": true,
+      "last_name": "Last 0",
+      "name": "Employee 0",
+      "groups": [
+        {
+          "id": "group_0"
+        }
+      ],
+      "custom_properties": {
+        "nickname": "Nick 0",
+        "has_keys": true
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_1",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 1",
+      "id": "employee_1",
+      "is_active": true,
+      "last_name": "Last 1",
+      "name": "Employee 1",
+      "groups": [
+        {
+          "id": "group_1"
+        }
+      ],
+      "custom_properties": {
+        "nickname": "Nick 1",
+        "has_keys": false
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_2",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 2",
+      "id": "employee_2",
+      "is_active": true,
+      "last_name": "Last 2",
+      "name": "Employee 2",
+      "groups": [
+        {
+          "id": "group_2"
+        }
+      ],
+      "custom_properties": {
+        "nickname": "Nick 2",
+        "has_keys": true
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_3",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 3",
+      "id": "employee_3",
+      "is_active": true,
+      "last_name": "Last 3",
+      "name": "Employee 3",
+      "groups": [
+        {
+          "id": "group_3"
+        }
+      ],
+      "custom_properties": {
+        "nickname": "Nick 3",
+        "has_keys": false
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_4",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 4",
+      "id": "employee_4",
+      "is_active": true,
+      "last_name": "Last 4",
+      "name": "Employee 4",
+      "groups": [
+        {
+          "id": "group_4"
+        }
+      ],
+      "custom_properties": {
+        "nickname": "Nick 4",
+        "has_keys": true
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_5",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 5",
+      "id": "employee_5",
+      "is_active": true,
+      "last_name": "Last 5",
+      "name": "Employee 5",
+      "custom_properties": {
+        "nickname": "Nick 5",
+        "has_keys": false
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_6",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 6",
+      "id": "employee_6",
+      "is_active": true,
+      "last_name": "Last 6",
+      "name": "Employee 6",
+      "custom_properties": {
+        "nickname": "Nick 6",
+        "has_keys": true
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_7",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 7",
+      "id": "employee_7",
+      "is_active": true,
+      "last_name": "Last 7",
+      "name": "Employee 7",
+      "custom_properties": {
+        "nickname": "Nick 7",
+        "has_keys": false
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_8",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 8",
+      "id": "employee_8",
+      "is_active": true,
+      "last_name": "Last 8",
+      "name": "Employee 8",
+      "custom_properties": {
+        "nickname": "Nick 8",
+        "has_keys": true
+      }
+    },
+    {
+      "HRISEmployee_number": "emp_9",
+      "employment_status": "FULL_TIME",
+      "first_name": "First 9",
+      "id": "employee_9",
+      "is_active": true,
+      "last_name": "Last 9",
+      "name": "Employee 9",
+      "custom_properties": {
+        "nickname": "Nick 9",
+        "has_keys": false
+      }
+    },
+    {
+      "company": "Veza",
+      "display_name": "Detailed Employee Display Name",
+      "canonical_name": "Detailed Employee Canonical Name",
+      "email": "detailed_empolyee@cookiestg.com",
+      "HRISEmployee_number": "1010101",
+      "employment_status": "Hired",
+      "employment_types": [
+        "FULL_TIME"
+      ],
+      "first_name": "Detailed",
+      "home_location": "Des Plaines, IL",
+      "idp_id": "detailed_employee@veza.local",
+      "id": "detailedemployee",
+      "is_active": true,
+      "job_title": "Software Engineer",
+      "last_name": "Employee",
+      "name": "Detailed Employee",
+      "personal_email": "detailed_employee@example.com",
+      "preferred_name": "Dee",
+      "primary_time_zone": "CST",
+      "user_name": "detailed_employee",
+      "work_location": "Chicago, IL",
+      "cost_center": {
+        "id": "cc01"
+      },
+      "department": {
+        "id": "eng"
+      },
+      "managers": [
+        {
+          "id": "employee_1"
+        },
+        {
+          "id": "employee_2"
+        }
+      ],
+      "start_date": "2020-04-12T23:20:50.52Z",
+      "termination_date": "2023-10-01T23:20:50.52Z"
+    }
+  ],
+  "groups": [
+    {
+      "group_type": "cost_center",
+      "id": "cc01",
+      "name": "Cost Center 01"
+    },
+    {
+      "group_type": "Department",
+      "id": "eng",
+      "name": "Engineering"
+    },
+    {
+      "group_type": "Team",
+      "id": "group_0",
+      "name": "Group 0",
+      "custom_properties": {
+        "is_social": true
+      }
+    },
+    {
+      "group_type": "Team",
+      "id": "group_1",
+      "name": "Group 1"
+    },
+    {
+      "group_type": "Team",
+      "id": "group_2",
+      "name": "Group 2"
+    },
+    {
+      "group_type": "Team",
+      "id": "group_3",
+      "name": "Group 3"
+    },
+    {
+      "group_type": "Team",
+      "id": "group_4",
+      "name": "Group 4"
+    }
+  ]
+}

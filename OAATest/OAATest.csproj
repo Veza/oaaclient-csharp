@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+
+    <UserSecretsId>795550e3-96e7-4ab3-959a-c1e535a0e3aa</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="OAA\Application\custom_application_payload.json" />
+    <None Remove="OAA\Filesystem\filesystem_folder_payload.json" />
+    <None Remove="OAA\Filesystem\filesystem_server_payload.json" />
+    <None Remove="OAA\HRIS\hris_provider_payload.json" />
+    <None Remove="OAA\IdP\idp_provider_payload.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="OAA\Application\custom_application_payload.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAA\Filesystem\filesystem_folder_payload.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAA\Filesystem\filesystem_server_payload.json" />
+    <EmbeddedResource Include="OAA\HRIS\hris_provider_payload.json" />
+    <EmbeddedResource Include="OAA\IdP\idp_provider_payload.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.4.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.4.3" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OAA\OAA.csproj" />
+  </ItemGroup>
+
+</Project>

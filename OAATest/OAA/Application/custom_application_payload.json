@@ -1,0 +1,434 @@
+{
+  "applications": [
+    {
+      "application_type": "dotnet",
+      "custom_properties": {
+        "version": "2022.2.2"
+      },
+      "description": "This is a test",
+      "local_groups": [
+        {
+          "name": "group1",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "group_id": 1
+          },
+          "id": "group1"
+        },
+        {
+          "name": "group2",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "group_id": 2
+          },
+          "id": "group2"
+        },
+        {
+          "name": "group3",
+          "groups": [
+            "group1",
+            "group2"
+          ],
+          "id": "group3"
+        }
+      ],
+      "local_roles": [
+        {
+          "name": "role1",
+          "permissions": [
+            "all",
+            "Admin",
+            "Manage_Thing"
+          ],
+          "tags": [],
+          "roles": [],
+          "custom_properties": {
+            "custom": false,
+            "role_id": 1
+          },
+          "id": "role1"
+        },
+        {
+          "name": "role2",
+          "permissions": [
+            "view"
+          ],
+          "tags": [],
+          "roles": [],
+          "custom_properties": {
+            "custom": true,
+            "role_id": 1
+          },
+          "id": "role2"
+        },
+        {
+          "name": "role3",
+          "permissions": [
+            "manage"
+          ],
+          "tags": [],
+          "roles": [
+            "role2"
+          ],
+          "custom_properties": {
+            "role_id": 3
+          },
+          "id": "role3"
+        },
+        {
+          "name": "empty_role",
+          "permissions": [],
+          "tags": [],
+          "roles": [],
+          "custom_properties": {},
+          "id": "empty_role"
+        }
+      ],
+      "local_users": [
+        {
+          "name": "bob",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "birthday": "2000-01-01T00:00:00.000Z",
+            "is_guest": false,
+            "NAME": "BOB",
+            "peers": [
+              "bob",
+              "mary",
+              "sue",
+              "rob"
+            ],
+            "user_id": 0
+          },
+          "deactivated_at": "2003-03-01T00:00:00.000Z",
+          "groups": [
+            "group1",
+            "group2"
+          ],
+          "identities": [
+            "bob@example.com"
+          ],
+          "is_active": true,
+          "last_login_at": "2002-02-01T00:00:00.000Z",
+          "password_last_changed_at": "2004-04-01T00:00:00.000Z",
+          "id": "bob"
+        },
+        {
+          "name": "mary",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "birthday": "2000-01-01T00:00:00.000Z",
+            "is_guest": false,
+            "NAME": "MARY",
+            "peers": [
+              "bob",
+              "mary",
+              "sue",
+              "rob"
+            ],
+            "user_id": 1
+          },
+          "deactivated_at": "2003-03-01T00:00:00.000Z",
+          "groups": [
+            "group1",
+            "group2"
+          ],
+          "identities": [
+            "mary@example.com"
+          ],
+          "is_active": false,
+          "last_login_at": "2002-02-01T00:00:00.000Z",
+          "password_last_changed_at": "2004-04-01T00:00:00.000Z",
+          "id": "mary"
+        },
+        {
+          "name": "sue",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "birthday": "2000-01-01T00:00:00.000Z",
+            "is_guest": false,
+            "NAME": "SUE",
+            "peers": [
+              "bob",
+              "mary",
+              "sue",
+              "rob"
+            ],
+            "user_id": 2
+          },
+          "deactivated_at": "2003-03-01T00:00:00.000Z",
+          "identities": [
+            "sue@example.com"
+          ],
+          "is_active": true,
+          "last_login_at": "2002-02-01T00:00:00.000Z",
+          "password_last_changed_at": "2004-04-01T00:00:00.000Z",
+          "id": "sue"
+        },
+        {
+          "name": "rob",
+          "created_at": "2001-01-01T00:00:00.000Z",
+          "custom_properties": {
+            "birthday": "2000-01-01T00:00:00.000Z",
+            "is_guest": false,
+            "NAME": "ROB",
+            "peers": [
+              "bob",
+              "mary",
+              "sue",
+              "rob"
+            ],
+            "user_id": 3
+          },
+          "deactivated_at": "2003-03-01T00:00:00.000Z",
+          "groups": [
+            "group3"
+          ],
+          "identities": [
+            "rob@example.com"
+          ],
+          "is_active": true,
+          "last_login_at": "2002-02-01T00:00:00.000Z",
+          "password_last_changed_at": "2004-04-01T00:00:00.000Z",
+          "id": "rob"
+        }
+      ],
+      "name": "dotnet app",
+      "resources": [
+        {
+          "name": "thing1",
+          "resource_type": "thing",
+          "description": "thing1",
+          "custom_properties": {
+            "private": false,
+            "hair_color": "blue",
+            "peers": [
+              "thing2",
+              "thing3"
+            ],
+            "publish_date": "1959-03-12T00:00:00.000Z",
+            "resource_id": 1
+          },
+          "id": "thing1",
+          "tags": [
+            {
+              "Key": "tag1",
+              "Value": "This is a value @,-_."
+            }
+          ]
+        },
+        {
+          "name": "thing2",
+          "resource_type": "thing",
+          "custom_properties": {
+            "private": false,
+            "hair_color": "blue",
+            "peers": [
+              "thing2",
+              "thing3"
+            ],
+            "publish_date": "1959-03-12T00:00:00.000Z",
+            "resource_id": 2
+          },
+          "id": "thing2",
+          "sub_resources": [
+            {
+              "name": "cog1",
+              "resource_type": "cog",
+              "connections": [
+                {
+                  "id": "service_account@some-project.iam.gserviceaccount.com",
+                  "node_type": "GoogleCloudServiceAccount"
+                }
+              ],
+              "id": "cog1"
+            }
+          ]
+        }
+      ],
+      "tags": []
+    }
+  ],
+  "custom_property_definition": {
+    "applications": [
+      {
+        "application_properties": {
+          "version": "STRING"
+        },
+        "application_type": "dotnet",
+        "local_group_properties": {
+          "group_id": "NUMBER"
+        },
+        "local_role_properties": {
+          "custom": "BOOLEAN",
+          "role_id": "NUMBER"
+        },
+        "local_user_properties": {
+          "is_guest": "BOOLEAN",
+          "user_id": "NUMBER",
+          "NAME": "STRING",
+          "peers": "STRING_LIST",
+          "birthday": "TIMESTAMP"
+        },
+        "resources": [
+          {
+            "resource_type": "thing",
+            "properties": {
+              "hair_color": "STRING",
+              "peers": "STRING_LIST",
+              "private": "BOOLEAN",
+              "publish_date": "TIMESTAMP",
+              "resource_id": "NUMBER"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "identity_to_permissions": [
+    {
+      "identity": "group2",
+      "identity_type": "local_group",
+      "role_assignments": [
+        {
+          "application": "dotnet app",
+          "role": "role2",
+          "apply_to_application": false,
+          "resources": [
+            "thing1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "user01@example.com",
+      "identity_type": "idp",
+      "role_assignments": [
+        {
+          "application": "dotnet app",
+          "role": "role1",
+          "apply_to_application": true,
+          "resources": []
+        }
+      ]
+    },
+    {
+      "identity": "bob",
+      "identity_type": "local_user",
+      "role_assignments": [
+        {
+          "application": "dotnet app",
+          "role": "role1",
+          "apply_to_application": true,
+          "resources": []
+        }
+      ]
+    },
+    {
+      "identity": "mary",
+      "identity_type": "local_user",
+      "application_permissions": [
+        {
+          "application": "dotnet app",
+          "resources": [
+            "thing2",
+            "thing2.cog1"
+          ],
+          "permission": "view"
+        }
+      ]
+    },
+    {
+      "identity": "sue",
+      "identity_type": "local_user",
+      "role_assignments": [
+        {
+          "application": "dotnet app",
+          "role": "role3",
+          "apply_to_application": true,
+          "resources": []
+        }
+      ]
+    },
+    {
+      "identity": "rob",
+      "identity_type": "local_user",
+      "application_permissions": [
+        {
+          "application": "dotnet app",
+          "permission": "manage",
+          "apply_to_application": true
+        },
+        {
+          "application": "dotnet app",
+          "resources": [
+            "thing1"
+          ],
+          "permission": "manage"
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "name": "all",
+      "permission_type": [
+        "DataCreate",
+        "DataDelete",
+        "DataRead",
+        "DataWrite",
+        "MetadataCreate",
+        "MetadataDelete",
+        "MetadataRead",
+        "MetadataWrite",
+        "NonData"
+      ],
+      "apply_to_sub_resources": false,
+      "resource_types": []
+    },
+    {
+      "name": "Admin",
+      "permission_type": [
+        "DataRead",
+        "DataWrite",
+        "MetadataRead",
+        "MetadataWrite",
+        "NonData"
+      ],
+      "apply_to_sub_resources": true,
+      "resource_types": []
+    },
+    {
+      "name": "Manage",
+      "permission_type": [
+        "DataRead",
+        "DataWrite",
+        "MetadataRead",
+        "MetadataWrite",
+        "NonData"
+      ],
+      "apply_to_sub_resources": false,
+      "resource_types": []
+    },
+    {
+      "name": "View",
+      "permission_type": [
+        "DataRead",
+        "MetadataRead"
+      ],
+      "apply_to_sub_resources": false,
+      "resource_types": []
+    },
+    {
+      "name": "Manage_Thing",
+      "permission_type": [
+        "DataRead",
+        "DataWrite"
+      ],
+      "apply_to_sub_resources": false,
+      "resource_types": [
+        "thing"
+      ]
+    }
+  ]
+}
